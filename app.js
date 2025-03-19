@@ -1,20 +1,10 @@
 // El principal objetivo de este desafío es fortalecer tus habilidades en lógica de programación. Aquí deberás desarrollar la lógica para resolver el problema.
 
-
-//console.log("Hello world  ds")
-
-
-
-//Variables
-//funciones
-//Eventos
-//Objetos
-
-
 //Variables utilizadas
-const listAmigo = [];
+const listAmigo = []; // Lista de amigos
 const Amigo = document.getElementById("amigo");
 const seeLista = document.getElementById("listaAmigos");
+const seeSorteo = document.getElementById("resultado");
 
 
 function agregarAmigo() {
@@ -23,9 +13,6 @@ function agregarAmigo() {
     //listaAmigos
     listAmigo.push(Amigo.value);
     seeLista.innerHTML += "<h1>" + Amigo.value + "</h1>";
-
-    //seeLista.innerHTML += "<li>" + Amigo.value + "</li>";
-
     console.log(listAmigo);
 
 }
@@ -36,4 +23,6 @@ function sortearAmigo(){
     let random = Math.floor(Math.random() * listAmigo.length)
     //seeLista.innerHTML += "<h1>" + Amigo.value + "</h1>";
     console.log(random)
+    let amigoRandom = listAmigo[random];
+    seeSorteo.innerHTML = "<h1> Tu amigo secreto es: " + amigoRandom + "</h1>";
 }
