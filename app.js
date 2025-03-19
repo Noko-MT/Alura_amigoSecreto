@@ -8,8 +8,8 @@ const seeSorteo = document.getElementById("resultado");
 
 
 function agregarAmigo() {
+    
     if(!Amigo.value){alert("Debes ingresar un nombre")}
-
     //listaAmigos
     listAmigo.push(Amigo.value);
     seeLista.innerHTML += "<h1>" + Amigo.value + "</h1>";
@@ -18,10 +18,8 @@ function agregarAmigo() {
 }
 
 function sortearAmigo(){
-    
-    
+
     let random = Math.floor(Math.random() * listAmigo.length)
-    //seeLista.innerHTML += "<h1>" + Amigo.value + "</h1>";
     console.log(random)
     let amigoRandom = listAmigo[random];
     seeSorteo.innerHTML = "<h1> Tu amigo secreto es: " + amigoRandom + "</h1>";
